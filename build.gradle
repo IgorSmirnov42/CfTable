@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.32'
+    id 'application'
+}
+
+application {
+    mainClass = 'com.codeforces.MainKt'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    compile 'com.google.api-client:google-api-client:1.30.4'
+    compile 'com.google.oauth-client:google-oauth-client-jetty:1.30.6'
+    compile 'com.google.apis:google-api-services-sheets:v4-rev581-1.25.0'
+    implementation group: 'com.github.doyaaaaaken', name: 'kotlin-csv-jvm', version: '0.15.1'
+    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.9.1'
+    implementation group: 'org.json', name: 'json', version: '20201115'
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.15'
+    implementation 'com.beust:klaxon:5.5'
+    implementation "com.github.ajalt.clikt:clikt:3.1.0"
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,7 @@
+/.gradle/
+/build/
+/.idea/
+/results/AllResults.csv
+/tokens/
+/src/main/resources/credentials.json
+/src/main/resources/secrets.json
